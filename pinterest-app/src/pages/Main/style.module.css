@@ -1,3 +1,16 @@
+.header{
+    width: 100%;
+    height: 110px;
+
+    border-bottom: 4px solid rgb(242, 14, 14);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+}
+
 .gallery_wrapper{
     margin: 0 auto;
     padding: 28px 0;
@@ -122,8 +135,8 @@
 
 
 .popup_wrapper > .popup_body{
-    width: 50%;
-    height: 70%;
+    width: fit-content;
+    height: 490px;
 
     background-color: white;
 
@@ -137,9 +150,6 @@
     box-sizing: border-box;
 
     display: flex;
-    flex-direction: column;
-
-    text-align: left;
 }
 
 .closePopup{
@@ -158,12 +168,21 @@
     background-image: url('https://img.icons8.com/ios/50/delete-sign--v1.png');
     background-repeat: no-repeat;
     background-size: cover;
+
+    z-index: 999;
 }
 
-.popup_body > h1{
+.imageInfo{
+    padding: 20px;
+    box-sizing: border-box;
+
+    position: relative;
+}
+
+.imageInfo > h1{
     font-family: sans-serif;
 
-    font-size: 26px;
+    font-size: 32px;
     font-weight: 500;
 
     margin-bottom: 10px;
@@ -173,23 +192,94 @@
 
 .popup_body > img{
     border-radius: 20px;
+    width: 600px;
+    height: 100%;
 }
 
 .pictureLocation{
     font-family: sans-serif;
     line-height: 22px;
-    font-size: 16px;
+    font-size: 24px;
+    font-weight: 400;
 
     background-image: url('https://img.icons8.com/?size=100&id=43777&format=png&color=000000');
     background-repeat: no-repeat;
-    background-position: 1%;
+    background-position: -5px;
 
-    background-size: 20px;
-
-    height: 20px;
+    background-size: 30px;
 
     margin-top: 15px 0 0 0;
 
-    padding-left: 25px;
+    padding-left: 30px;
+    line-height: 25px;
     box-sizing: border-box;
+}
+
+.pictureLocation > span {
+    font-size: 16px;
+}
+
+.imageInfo > p{
+    font-family: sans-serif;
+    font-size: 14px;
+
+    width: 240px;
+
+    margin-top: 50px;
+
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.redLine{
+    width: 100%;
+    height: 4px;
+
+    background-color: rgb(242, 14, 14);
+}
+
+.createdWrapper{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    position: absolute;
+    bottom: 0;
+
+    height: fit-content;
+}
+
+.createdWrapper > h3{
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    color: rgb(153, 153, 153);
+
+    text-align: left;
+}
+
+.btnContainer{
+    display: flex;
+    gap: 10px;
+}
+
+.btnContainer > button{
+    background-color: transparent;
+    height: 30px;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.nextBtn{
+    background-image: url('https://img.icons8.com/?size=100&id=p1BDpjEY201H&format=png&color=000000');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.prevBtn{
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAl0lEQVR4nOWSQQqCUBRFz0pMkdyYg5bVuJbTrEEqVEvIidiL4BshaZbvQtCBOz2H9/nwLyTABshV8gow4OItj4AiyLtJ5aaWm5f8MCC3ufIYKEfkNnENsO7LF05yC2s/eRb7cg92Ark9B/bqwBI4KQN3MuDsKL/ygszxki0DvHsuF8YiqCN4R47KQP+SGhFp+BUrVeB3uQGc9dasA2Vy0AAAAABJRU5ErkJggg==');
+    background-repeat: no-repeat;
+    background-size: cover;
 }

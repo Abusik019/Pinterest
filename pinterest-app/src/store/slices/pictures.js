@@ -12,8 +12,6 @@ const initialState = {
 export const getPictures = createAsyncThunk("pictures/getPictures", async () =>  {
     const response = await axios.get(API_URL);
 
-    console.log(response)
-
     if(response.status !== 200){
         console.error('Error while fetching storage data!');
         return [];
