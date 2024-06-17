@@ -105,21 +105,23 @@ function Main() {
                                 setCurrentIndex(null);
                             }}
                         />
-                        <img src={picture.image} alt={picture.name} />
+                        <div className={styles.imageContainer}>
+                            <img src={picture.image} alt={picture.name} />
+                            <div className={styles.btnContainer}>
+                                <button className={styles.prevBtn} onClick={handlePrevPicture}></button>
+                                <button className={styles.nextBtn} onClick={handleNextPicture}></button>
+                            </div>
+                        </div>
                         <div className={styles.imageInfo}>
                             <h1>{picture.name}</h1>
                             <div className={styles.redLine}></div>
-                            <h2 className={styles.pictureLocation}>
-                                {picture.country}<br />
-                                <span>{picture.city}</span>
-                            </h2>
                             <p>{picture.description}</p>
+                            <h2 className={styles.pictureLocation}>
+                                {picture.country}, <span>{picture.city}</span>
+                            </h2>
+                            <a target="_blank" href={`https://www.google.com/maps/@${picture.latitude},${picture.longidute},5z`}>lat: {picture.latitude}, lon: {picture.longidute}</a>
                             <div className={styles.createdWrapper}>
                                 <h3>Created: {picture.created}</h3>
-                                <div className={styles.btnContainer}>
-                                    <button className={styles.prevBtn} onClick={handlePrevPicture}></button>
-                                    <button className={styles.nextBtn} onClick={handleNextPicture}></button>
-                                </div>
                             </div>
                         </div>
                     </div>
